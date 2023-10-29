@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Expedientes Clínicos</title>
+    <link rel="stylesheet" href="../static/css/expedientes/expedStyle.css">
+    
+</head>
+<body>
+
+<h1>Captura de Expedientes</h1>
+
+<div id="cuadrantes">
+
+    <!-- Primer Cuadrante: Pacientes -->
+    <div class="cuadrante">
+        <h2>Información del Paciente</h2>
+        <div class="cuadrante-paciente">
+            <!-- ID del Paciente -->
+            <label for="pacienteId">ID:</label>
+            <input type="text" id="pacienteId" name="pacienteId" value="{{ next_id }}" readonly>
+            <!-- Nombre -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        
+            <!-- Apellido Paterno -->
+            <label for="apellidoPaterno">Apellido Paterno:</label>
+            <input type="text" id="apellidoPaterno" name="apellidoPaterno">
+        
+            <!-- Apellido Materno -->
+            <label for="apellidoMaterno">Apellido Materno:</label>
+            <input type="text" id="apellidoMaterno" name="apellidoMaterno">
+        
+            <!-- Fecha de Nacimiento -->
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+        
+            <!-- Dirección -->
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion">
+        
+            <!-- Teléfono -->
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+        
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        
+            <!-- Género -->
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero">
+                <option value="M">Masc</option>
+                <option value="F">Fem</option>
+            </select>
+        </div> <!-- Fin del div cuadrante-paciente -->
+    </div>
+
+    <!-- Segundo Cuadrante: Antecedentes Clínicos -->
+    <div class="cuadrante">
+        <h2>Antecedentes Clínicos</h2>
+        <label for="tipoAntecedente">Tipo de Antecedente:</label>
+        <select id="tipoAntecedente" name="tipoAntecedente">
+            <!-- ... Opciones del comboBox ... -->
+        </select>
+        <label for="descripcionAntecedente">Descripción:</label>
+        <input type="text" id="descripcionAntecedente" name="descripcion">
+    </div>
+
+    <!-- Tercer Cuadrante: Sintomatología -->
+    <div class="cuadrante">
+        <h2>Sintomatología</h2>
+        <label for="sintomatologia">Sintomatología:</label>
+        <textarea id="sintomatologia" name="sintomatologia"></textarea>
+    </div>
+
+    <!-- Cuarto Cuadrante: Estudios y Acciones -->
+    <div class="cuadrante cuadrante-estudios">
+        <h2>Estudios</h2>
+        <label for="nombreEstudio">Tipo de Estudio:</label>
+        <select id="nombreEstudio" name="nombreEstudio">
+            <!-- ... Opciones de estudios ... -->
+        </select>
+        <button type="button" id="btn-encargar">Encargar estudio</button>
+        <button type="button" id="btnImprimirCertificado" onclick="imprimirCertificado()">Imprimir Certificado Médico</button>
+        <a href="dashboard.html">Regresar al Dashboard</a>
+        
+    </div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="../static/js/params/cargafmExpedientes.js"></script>
+<script src="../static/js/crud/expedienteActions.js"></script>
+
+</body>
+</html>
+
+

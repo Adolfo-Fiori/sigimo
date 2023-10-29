@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignaciones de Médicos Especialistas</title>
+</head>
+<body>
+    <h1>Asignaciones de Médicos Especialistas</h1>
+
+    <!-- Consultar catálogo de Pacientes -->
+    <section>
+        <h2>Consultar catálogo de Pacientes</h2>
+        <!-- Este es un input de búsqueda básico, puedes integrarlo con una función de búsqueda en tu backend -->
+        <input type="text" id="buscarPaciente" placeholder="Buscar paciente..." onkeyup="buscarPaciente()">
+        <div id="resultadoPacientes"></div>
+    </section>
+
+    <!-- Dar de alta a médicos en sistema -->
+    <section>
+        <h2>Registrar Médico Especialista</h2>
+        <form action="/ruta_registro_medico" method="post">
+            <label for="nombreMedico">Nombre del Médico:</label>
+            <input type="text" id="nombreMedico" name="nombreMedico" required>
+
+            <label for="especialidad">Especialidad:</label>
+            <input type="text" id="especialidad" name="especialidad" required>
+
+            <!-- Otros campos necesarios para el registro de médicos -->
+
+            <input type="submit" value="Registrar Médico">
+        </form>
+    </section>
+
+    <!-- Asignar y Desasignar paciente a médico -->
+    <section>
+        <h2>Asignación de Paciente a Médico</h2>
+        <form action="/ruta_asignacion_medico" method="post">
+            <label for="paciente">Seleccione un Paciente:</label>
+            <select id="paciente" name="paciente">
+                <!-- Aquí deberías cargar la lista de pacientes desde la base de datos -->
+            </select>
+
+            <label for="medicoAsignado">Seleccione un Médico:</label>
+            <select id="medicoAsignado" name="medicoAsignado">
+                <!-- Aquí deberías cargar la lista de médicos desde la base de datos -->
+            </select>
+
+            <input type="submit" value="Asignar">
+        </form>
+        <button onclick="desasignarMedico()">Desasignar Médico</button>
+    </section>
+
+    <!-- Sección para firmas digitales, dependiendo de cómo implementes las firmas digitales en tu sistema -->
+    <section>
+        <h2>Firma Digital</h2>
+        <p>Proceso de obtención de firma digital.</p>
+        <!-- Aquí deberías integrar tu proceso para capturar o verificar firmas digitales -->
+    </section>
+
+    <!-- Los scripts de JavaScript necesarios para funciones como buscarPaciente, desasignarMedico, etc. -->
+    <script>
+        function buscarPaciente() {
+            // Lógica para buscar pacientes por nombre o identificación
+        }
+
+        function desasignarMedico() {
+            // Lógica para desasignar un médico a un paciente
+        }
+    </script>
+</body>
+</html>
+

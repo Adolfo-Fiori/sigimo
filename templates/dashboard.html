@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../static/css/accounts/dashboards/dashStyle.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Tu Tablero</h2>
+
+        
+    <!-- Sección para enlaces -->
+    <div class="links-section">
+      <h3>Accesos Directos:</h3>
+      <ul>
+          {% if 'asignar_permisos_roles' in enlaces %}
+          <li><a href="/asignar_permisos_roles">Asignar permisos y roles</a></li>
+          {% endif %}
+  
+          {% if 'captura_expedientes' in enlaces %}
+          <li><a href="/captura_expedientes">Captura de expedientes</a></li>
+          {% endif %}
+
+          {% if 'asignaciones_especialistas' in enlaces %}
+          <li><a href="/asignaciones_especialistas">Asignaciones de especialistas</a></li>
+          {% endif %}
+
+          {% if 'resultados_laboratorio' in enlaces %}
+          <li><a href="/resultados_laboratorio">Resultados de laboratorio</a></li>
+          {% endif %}
+
+          {% if 'firma_digital' in enlaces %}
+          <li><a href="/firma_digital">Firma digital</a></li>
+          {% endif %}
+      </ul>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Laboratorio</title>
+    <link rel="stylesheet" href="../static/css/resultados/resultsStyle.css">
+</head>
+<body>
+    <h1>Resultados de Laboratorio</h1>
+
+    <!-- Recibir información del estudio a realizar -->
+    <section>
+        <h2>Información del Estudio</h2>
+        <!-- Código del paciente para mantener la privacidad -->
+        <label for="codigoPaciente">Código del Paciente:</label>
+        <input type="text" id="codigoPaciente" placeholder="Código del Paciente">
+
+        <!-- Información restringida a edad y sexo del paciente -->
+        <label for="edadPaciente">Edad:</label>
+        <input type="number" id="edadPaciente" placeholder="Edad">
+
+        <label for="sexoPaciente">Sexo:</label>
+        <select id="sexoPaciente">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <!-- Otros géneros si lo consideras necesario -->
+        </select>
+    </section>
+
+    <!-- Seleccionar procedimiento de análisis -->
+    <section>
+        <h2>Procedimiento de Análisis</h2>
+        <label for="tipoAnalisis">Tipo de Análisis:</label>
+        <select id="tipoAnalisis">
+            <!-- Aquí se deben cargar los tipos de análisis que ofrece el laboratorio -->
+        </select>
+
+        <label for="procedimiento">Procedimiento:</label>
+        <textarea id="procedimiento" rows="4"></textarea>
+    </section>
+
+    <!-- Capturar resultados -->
+    <section>
+        <h2>Captura de Resultados</h2>
+        <textarea id="resultados" rows="6" placeholder="Capture aquí los resultados del análisis..."></textarea>
+    </section>
+
+    <!-- Reportar observaciones -->
+    <section>
+        <h2>Observaciones</h2>
+        <label for="observacionesMuestras">Observaciones relacionadas con defectos en muestras:</label>
+        <textarea id="observacionesMuestras" rows="4"></textarea>
+
+        <label for="observacionesMateriales">Observaciones relacionadas con falta de materiales:</label>
+        <textarea id="observacionesMateriales" rows="4"></textarea>
+    </section>
+
+    <!-- Botón para imprimir resultados -->
+    <button onclick="imprimirResultados()">Imprimir Resultados</button>
+
+    <!-- Script para funciones como imprimirResultados -->
+    <script>
+        function imprimirResultados() {
+            // Aquí deberías implementar la función para imprimir los resultados capturados
+        }
+    </script>
+</body>
+</html>
+

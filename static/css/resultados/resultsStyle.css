@@ -1,0 +1,63 @@
+    /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.form-container, section {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Puedes ajustar esto si prefieres un ancho diferente */
+    text-align: center;
+    margin-bottom: 20px; /* Separación entre secciones */
+}
+
+h1 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+input[type="text"], input[type="number"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Espacio debajo de cada input y textarea */
+    box-sizing: border-box; /* Para que el padding no afecte al ancho total */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
